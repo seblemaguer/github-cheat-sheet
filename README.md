@@ -1,5 +1,5 @@
 # GitHub Cheat Sheet [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-A collection of cool hidden and not so hidden features of Git and GitHub. This cheat sheet was inspired by [Zach Holman](https://github.com/holman)'s [Git and GitHub Secrets](http://www.confreaks.com/videos/1229-aloharuby2012-git-and-github-secrets) talk at Aloha Ruby Conference 2012 ([slides](https://speakerdeck.com/holman/git-and-github-secrets)) and his [More Git and GitHub Secrets](https://vimeo.com/72955426) talk at WDCNZ 2013 ([slides](https://speakerdeck.com/holman/more-git-and-github-secrets)).
+A collection of cool hidden and not so hidden features of Git and GitHub. This cheat sheet was inspired by [Zach Holman](https://github.com/holman)'s [Git and GitHub Secrets](http://confreaks.tv/videos/aloharuby2012-git-and-github-secrets) talk at Aloha Ruby Conference 2012 ([slides](https://speakerdeck.com/holman/git-and-github-secrets)) and his [More Git and GitHub Secrets](https://vimeo.com/72955426) talk at WDCNZ 2013 ([slides](https://speakerdeck.com/holman/more-git-and-github-secrets)).
 
 *Shortlink: [`http://git.io/sheet`](http://git.io/sheet)*
 
@@ -46,7 +46,10 @@ A collection of cool hidden and not so hidden features of Git and GitHub. This c
     - [Diff or Patch of Pull Request](#diff-or-patch-of-pull-request)
     - [Rendering and diffing images](#rendering-and-diffing-images)
   - [Hub](#hub)
-  - [Contributing Guidelines](#contributing-guidelines)
+  - [Contribution Guidelines](#contribution-guidelines)
+    - [CONTRIBUTING file](#contributing-file)
+    - [ISSUE_TEMPLATE file](#issue_template-file)
+    - [PULL_REQUEST_TEMPLATE file](#pull_request_template-file)
   - [Octicons](#octicons)
   - [GitHub Resources](#github-resources)
     - [GitHub Talks](#github-talks)
@@ -70,6 +73,8 @@ A collection of cool hidden and not so hidden features of Git and GitHub. This c
     - [Color](#color)
   - [Git Resources](#git-resources)
     - [Git Books](#git-books)
+    - [Git Videos](#git-videos)
+    - [Git Articles](#git-articles)
 
 ## GitHub
 ### Ignore Whitespace
@@ -80,7 +85,7 @@ Adding `?w=1` to any diff URL will remove any changes only in whitespace, enabli
 [*Read more about GitHub secrets.*](https://github.com/blog/967-github-secrets)
 
 ### Adjust Tab Space
-Adding `?ts=4` to a diff or file URL will display tab characters as 4 spaces wide instead of the default 8. The number after `ts` can be adjusted to suit your preference. This does not work on Gists, or raw file views, but a [Chrome](https://chrome.google.com/webstore/detail/github-tab-size/ofjbgncegkdemndciafljngjbdpfmbkn) or [Opera  extension](https://addons.opera.com/en/extensions/details/github-tab-size/) can automate this.
+Adding `?ts=4` to a diff or file URL will display tab characters as 4 spaces wide instead of the default 8. The number after `ts` can be adjusted to suit your preference. This does not work on Gists, or raw file views, but a [Chrome](https://chrome.google.com/webstore/detail/tab-size-on-github/ofjbgncegkdemndciafljngjbdpfmbkn) or [Opera extension](https://addons.opera.com/en/extensions/details/github-tab-size/) can automate this.
 
 Here is a Go source file before adding `?ts=4`:
 
@@ -99,7 +104,7 @@ https://github.com/rails/rails/commits/master?author=dhh
 
 ![DHH commit history](http://i.imgur.com/S7AE29b.png)
 
-[*Read more about the differences between commits views.*](https://help.github.com/articles/differences-between-commit-views)
+[*Read more about the differences between commits views.*](https://help.github.com/articles/differences-between-commit-views/)
 
 ### Cloning a Repository
 When cloning a repository the `.git` can be left off the end.
@@ -160,7 +165,7 @@ https://github.com/rails/rails/compare/master...4-1-stable.diff
 https://github.com/rails/rails/compare/master...4-1-stable.patch
 ```
 
-[*Read more about comparing commits across time.*](https://help.github.com/articles/comparing-commits-across-time)
+[*Read more about comparing commits across time.*](https://help.github.com/articles/comparing-commits-across-time/)
 
 #### Compare Branches across Forked Repositories
 To use GitHub to compare branches across forked repositories, change the URL to look like this:
@@ -202,7 +207,7 @@ Password for 'https://tiimgreen@gist.github.com':
 ```
 
 However, Gists do not support directories. All files need to be added to the repository root.
-[*Read more about creating Gists.*](https://help.github.com/articles/creating-gists)
+[*Read more about creating Gists.*](https://help.github.com/articles/creating-gists/)
 
 ### Git.io
 [Git.io](http://git.io) is a simple URL shortener for GitHub.
@@ -260,7 +265,7 @@ This closes the issue and references the closing commit.
 
 ![Closing Repo](http://i.imgur.com/Uh1gZdx.png)
 
-[*Read more about closing Issues via commit messages.*](https://help.github.com/articles/closing-issues-via-commit-messages)
+[*Read more about closing Issues via commit messages.*](https://help.github.com/articles/closing-issues-via-commit-messages/)
 
 ### Cross-Link Issues
 If you want to link to another issue in the same repository, simply type hash `#` then the issue number, and it will be auto-linked.
@@ -309,7 +314,7 @@ can also see merged pull requests.  Just put the following in the filter:
 
 `is:merged`
 
-[*Read more about searching issues.*](https://help.github.com/articles/searching-issues)
+[*Read more about searching issues.*](https://help.github.com/articles/searching-issues/)
 
 Finally, github now allows you to filter by the Status API's status.
 
@@ -340,7 +345,7 @@ puts table.to_s
 
 GitHub uses [Linguist](https://github.com/github/linguist) to perform language detection and syntax highlighting. You can find out which keywords are valid by perusing the [languages YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml).
 
-[*Read more about GitHub Flavored Markdown.*](https://help.github.com/articles/github-flavored-markdown)
+[*Read more about GitHub Flavored Markdown.*](https://help.github.com/articles/github-flavored-markdown/)
 
 ### Emojis
 Emojis can be added to Pull Requests, Issues, commit messages, repository descriptions, etc. using `:name_of_emoji:`.
@@ -399,7 +404,7 @@ After taking a screenshot and adding it to the clipboard (mac: `cmd-ctrl-shift-4
 
 ![Pasting Clipboard Image to Comments](https://cloud.githubusercontent.com/assets/39191/5794265/39c9b65a-9f1b-11e4-9bc7-04e41f59ea5f.png)
 
-[*Read more about issue attachments.*](https://help.github.com/articles/issue-attachments)
+[*Read more about issue attachments.*](https://help.github.com/articles/issue-attachments/)
 
 ### Quick Licensing
 When creating a repository, GitHub gives you the option of adding in a pre-made license:
@@ -412,7 +417,7 @@ You can also add them to existing repositories by creating a new file through th
 
 Also works for `.gitignore`.
 
-[*Read more about open source licensing.*](https://help.github.com/articles/open-source-licensing)
+[*Read more about open source licensing.*](https://help.github.com/articles/open-source-licensing/)
 
 ### Task Lists
 In Issues and Pull requests check boxes can be added with the following syntax (notice the space):
@@ -439,7 +444,7 @@ When they are clicked, they will be updated in the pure Markdown:
 - [ ] Sleep
 ```
 
-[*Read more about task lists.*](https://help.github.com/articles/writing-on-github#task-lists)
+[*Read more about task lists.*](https://help.github.com/articles/writing-on-github/#task-lists)
 
 #### Task Lists in Markdown Documents
 In full Markdown documents **read-only** checklists can now be added using the following syntax:
@@ -474,7 +479,7 @@ Relative links are recommended in your Markdown files when linking to internal c
 
 Absolute links have to be updated whenever the URL changes (e.g. repository renamed, username changed, project forked). Using relative links makes your documentation easily stand on its own.
 
-[*Read more about relative links.*](https://help.github.com/articles/relative-links-in-readmes)
+[*Read more about relative links.*](https://help.github.com/articles/relative-links-in-readmes/)
 
 ### Metadata and Plugin Support for GitHub Pages
 Within Jekyll pages and posts, repository information is available within the `site.github` namespace, and can be displayed, for example, using `{{ site.github.project_title }}`.
@@ -484,7 +489,7 @@ The Jemoji and jekyll-mentions plugins enable [emoji](#emojis) and [@mentions](h
 [*Read more about repository metadata and plugin support for GitHub Pages.*](https://github.com/blog/1797-repository-metadata-and-plugin-support-for-github-pages)
 
 ### Viewing YAML Metadata in your Documents
-Many blogging websites, like [Jekyll](http://jekyllrb.com/) with [GitHub Pages](http://pages.github.com/), depend on some YAML-formatted metadata at the beginning of your post. GitHub will render this metadata as a horizontal table, for easier reading
+Many blogging websites, like [Jekyll](http://jekyllrb.com/) with [GitHub Pages](https://pages.github.com), depend on some YAML-formatted metadata at the beginning of your post. GitHub will render this metadata as a horizontal table, for easier reading
 
 ![YAML metadata](https://camo.githubusercontent.com/47245aa16728e242f74a9a324ce0d24c0b916075/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f36343035302f313232383236372f65303439643063362d323761302d313165332d396464382d6131636432323539393334342e706e67)
 
@@ -576,7 +581,7 @@ GitHub can display several common image formats, including PNG, JPG, GIF, and PS
 
 [![Diffable PSD](https://cloud.githubusercontent.com/assets/2546/3165594/55f2798a-eb56-11e3-92e7-b79ad791a697.gif)](https://github.com/blog/1845-psd-viewing-diffing)
 
-[*Read more about rendering and diffing images.*](https://help.github.com/articles/rendering-and-diffing-images)
+[*Read more about rendering and diffing images.*](https://help.github.com/articles/rendering-and-diffing-images/)
 
 ### Hub
 [Hub](https://github.com/github/hub) is a command line Git wrapper that gives you extra features and commands that make working with GitHub easier.
@@ -589,12 +594,32 @@ $ hub clone tiimgreen/toc
 
 [*Check out some more cool commands Hub has to offer.*](https://github.com/github/hub#commands)
 
-### Contributing Guidelines
-Adding a `CONTRIBUTING` file to the root of your repository will add a link to your file when a contributor creates an Issue or opens a Pull Request.
+### Contribution Guidelines
+GitHub supports adding 3 different files which help users contribute to your project.
+These files can either be placed in the root of your repository or a `.github` directory under the root.
+
+#### CONTRIBUTING File
+Adding a `CONTRIBUTING` or `CONTRIBUTING.md` file to either the root of your repository or a `.github` directory will add a link to your file when a contributor creates an Issue or opens a Pull Request.
 
 ![Contributing Guidelines](https://camo.githubusercontent.com/71995d6b0e620a9ef1ded00a04498241c69dd1bf/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f736b697463682f6973737565732d32303132303931332d3136323533392e6a7067)
 
 [*Read more about contributing guidelines.*](https://github.com/blog/1184-contributing-guidelines)
+
+#### ISSUE_TEMPLATE file
+You can define a template for all new issues opened in your project. The content of this file will pre-populate the new issue box when users create new issues. Add an `ISSUE_TEMPLATE` or `ISSUE_TEMPLATE.md` file to either the root of your repository or a `.github` directory.
+
+[*Read more about issue templates.*](https://github.com/blog/2111-issue-and-pull-request-templates)
+
+[Issue template file generator](https://www.talater.com/open-source-templates/)
+
+![GitHub Issue template](https://cloud.githubusercontent.com/assets/25792/13120859/733479fe-d564-11e5-8a1f-a03f95072f7a.png)
+
+#### PULL_REQUEST_TEMPLATE file
+You can define a template for all new pull requests opened in your project. The content of this file will pre-populate the text area when users create pull requests. Add a `PULL_REQUEST_TEMPLATE` or `PULL_REQUEST_TEMPLATE.md` file to either the root of your repository or a `.github` directory.
+
+[*Read more about pull request templates.*](https://github.com/blog/2111-issue-and-pull-request-templates)
+
+[Pull request template file generator](https://www.talater.com/open-source-templates/)
 
 ### Octicons
 GitHubs icons (Octicons) have now been open sourced.
@@ -747,7 +772,7 @@ git fetch origin
 git checkout pr/42
 ```
 
-[*Read more about checking out pull requests locally.*](https://help.github.com/articles/checking-out-pull-requests-locally)
+[*Read more about checking out pull requests locally.*](https://help.github.com/articles/checking-out-pull-requests-locally/)
 
 ### Empty Commits
 Commits can be pushed with no code changes by adding `--allow-empty`:
@@ -761,9 +786,7 @@ Some use-cases for this (that make sense), include:
  - Annotating the start of a new bulk of work or a new feature.
  - Documenting when you make changes to the project that aren't code related.
  - Communicating with people using your repository.
- - The first commit of a repo, as the first commit cannot be rebased later: `git commit -m "init repo" --allow-empty`.
-
-![It ain't even that trolololol...](http://i.minus.com/il1jaw.gif)
+ - The first commit of a repository: `git commit -m "Initial commit" --allow-empty`.
 
 ### Styled Git Status
 Running:
@@ -987,20 +1010,35 @@ $ git config --global color.ui 1
 | Official Git Tutorial | http://git-scm.com/docs/gittutorial |
 | Everyday Git | http://git-scm.com/docs/everyday |
 | Git Immersion | http://gitimmersion.com/ |
-| Ry's Git Tutorial | http://rypress.com/tutorials/git/index.html |
-| Git for Designers | http://hoth.entp.com/output/git_for_designers.html |
+| Ry's Git Tutorial | http://rypress.com/tutorials/git/index |
 | Git for Computer Scientists | http://eagain.net/articles/git-for-computer-scientists/ |
 | Git Magic | http://www-cs-students.stanford.edu/~blynn/gitmagic/ |
-| GitHub Training Kit | http://training.github.com/kit |
+| GitHub Training Kit | https://training.github.com/kit/ |
 | Git Visualization Playground | http://onlywei.github.io/explain-git-with-d3/#freeplay |
+| Learn Git Branching | http://pcottle.github.io/learnGitBranching/ |
+| A collection of useful .gitignore templates | https://github.com/github/gitignore |
 
 #### Git Books
 | Title | Link |
 | ----- | ---- |
-| Pragmatic Version Control Using Git | http://www.pragprog.com/titles/tsgit/pragmatic-version-control-using-git |
+| Pragmatic Version Control Using Git | https://pragprog.com/titles/tsgit/pragmatic-version-control-using-git |
 | Pro Git | http://git-scm.com/book |
 | Git Internals PluralSight | https://github.com/pluralsight/git-internals-pdf |
-| Git in the Trenches | http://cbx33.github.com/gitt/ |
+| Git in the Trenches | http://cbx33.github.io/gitt/ |
 | Version Control with Git | http://www.amazon.com/Version-Control-Git-collaborative-development/dp/1449316387 |
-| Pragmatic Guide to Git | http://www.pragprog.com/titles/pg_git/pragmatic-guide-to-git |
-| Git: Version Control for Everyone | http://www.packtpub.com/git-version-control-for-everyone/book |
+| Pragmatic Guide to Git | https://pragprog.com/titles/pg_git/pragmatic-guide-to-git |
+| Git: Version Control for Everyone | https://www.packtpub.com/application-development/git-version-control-everyone |
+
+#### Git Videos
+| Title | Link |
+| ----- | ---- |
+| Linus Torvalds on Git | https://www.youtube.com/watch?v=4XpnKHJAok8 |
+| Introduction to Git with Scott Chacon | https://www.youtube.com/watch?v=ZDR433b0HJY |
+| Git From the Bits Up | https://www.youtube.com/watch?v=MYP56QJpDr4 |
+| Graphs, Hashes, and Compression, Oh My! | https://www.youtube.com/watch?v=ig5E8CcdM9g |
+| GitHub Training & Guides | https://www.youtube.com/watch?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-&v=FyfwLX4HAxM |
+
+#### Git Articles
+| Title | Link |
+| ----- | ---- |
+| GitHub Flow  | http://scottchacon.com/2011/08/31/github-flow.html |
