@@ -38,7 +38,7 @@ Une collection d'astuces connues et moins connues pour Git et Github. Cette feui
   - [Rendu de données tabulaires](#rendering-tabular-data)
   - [Rétablir un pull request](#revert-a-pull-request)
   - [Diffs](#diffs)
-    - [Rendered Prose Diffs](#rendered-prose-diffs)
+    - [Rendu des diffs verbeux](#rendered-prose-diffs)
     - [Diffable Maps](#diffable-maps)
     - [Expanding Context in Diffs](#expanding-context-in-diffs)
     - [Diff or Patch of Pull Request](#diff-or-patch-of-pull-request)
@@ -420,40 +420,48 @@ Dans les documents Markdown, il est maintenant possible d'ajouter des listes de 
 
 [*Plus d'informations sur les listes de tâches dans les documents Markdown (En anglais)*](https://github.com/blog/1825-task-lists-in-all-markdown-documents)
 
-### Relative Links
-Relative links are recommended in your Markdown files when linking to internal content.
+### Liens relatifs
+L'utilisation de liens relatifs dans vos fichiers Markdown sont recommandés pour référencer des
+contenus internes.
 
 ```markdown
-[Link to a header](#awesome-section)
-[Link to a file](docs/readme)
+[Lien vers un titre](#awesome-section)
+[Lien vers un fichier](docs/readme)
 ```
 
-Absolute links have to be updated whenever the URL changes (e.g. repository renamed, username changed, project forked). Using relative links makes your documentation easily stand on its own.
+Les liens absolus doivent être mis à jour dès lors que l'URL change (e.g. renommage du dépôt,
+changement de nom d'utilisateur, projets forkés). L'utilisation de la lien relatifs permettre à
+votre document de rester cohérent sans modification malgré les changements précédemment évoqués.
 
-[*Read more about relative links.*](https://help.github.com/articles/relative-links-in-readmes)
+[*Plus d'informations à propos des liens relatifs.*](https://help.github.com/articles/relative-links-in-readmes)
 
-### Metadata and Plugin Support for GitHub Pages
-Within Jekyll pages and posts, repository information is available within the `site.github` namespace, and can be displayed, for example, using `{{ site.github.project_title }}`.
+### Support de plugins et de meta-données sur les pages GitHub
 
-The Jemoji and jekyll-mentions plugins enable [emoji](#emojis) and [@mentions](https://github.com/blog/821) in your Jekyll posts and pages to work just like you'd expect when interacting with a repository on GitHub.com.
+Au sein des pages et des messages Jekyll, les informations concernant les dépôts sont disponibles au
+sein de l'espace de nommage `site.github`. Ces informations peuvent être affichés, par example, en
+utilisant le format suivant `{{ site.github.project_title }}`.
 
-[*Read more about repository metadata and plugin support for GitHub Pages.*](https://github.com/blog/1797-repository-metadata-and-plugin-support-for-github-pages)
+Les plugins Jemoji et jekyll-mentions activent [emoji](#emojis) et
+[@mentions](https://github.com/blog/821) dans vos messages et pages Jekyll. Ceci, afin de
+fonctionner comme vous seriez en droit de l'attendre lors de vos interactions avec le dépôt sur GitHub.com.
 
-### Viewing YAML Metadata in your Documents
-Many blogging websites, like [Jekyll](http://jekyllrb.com/) with [GitHub Pages](http://pages.github.com/), depend on some YAML-formatted metadata at the beginning of your post. GitHub will render this metadata as a horizontal table, for easier reading
+[*Plus d'informations sur les méta-données et le support de plugin pour les pages GitHub.*](https://github.com/blog/1797-repository-metadata-and-plugin-support-for-github-pages)
 
-![YAML metadata](https://camo.githubusercontent.com/47245aa16728e242f74a9a324ce0d24c0b916075/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f36343035302f313232383236372f65303439643063362d323761302d313165332d396464382d6131636432323539393334342e706e67)
+### Afficher les méta-données YAML dans vos documents
+Un nombre important de blogs, comme [Jekyll](http://jekyllrb.com/) avec [GitHub Pages](http://pages.github.com/), reposent sur des méta-données au format YAML. Ces méta-données sont insérées en début de message. GitHub effectue alors un rendu de ces méta-données sur une table horizontale afin de simplifier la lecture.
 
-[*Read more about viewing YAML metadata in your documents.*](https://github.com/blog/1647-viewing-yaml-metadata-in-your-documents)
+![méta-données YAML](https://camo.githubusercontent.com/47245aa16728e242f74a9a324ce0d24c0b916075/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f36343035302f313232383236372f65303439643063362d323761302d313165332d396464382d6131636432323539393334342e706e67)
 
-### Rendering Tabular Data
-GitHub supports rendering tabular data in the form of `.csv` (comma-separated) and `.tsv` (tab-separated) files.
+[*Plus d'informations à propos de l'affichage des méta-données YAML dans vos documents.*](https://github.com/blog/1647-viewing-yaml-metadata-in-your-documents)
 
-![Tabular data](https://camo.githubusercontent.com/1b6dd0157ffb45d9939abf14233a0cb13b3b4dfe/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3238323735392f3937363436322f33323038336463652d303638642d313165332d393262322d3566323863313061353035392e706e67)
+### Rendu des tableaux
+GitHub supporte le rendu de tableau dont les données suivent les formats `.csv` (colonnes séparées par des virgules) ou `.tsv` (colonnes séparées par des tabulations).
 
-[*Read more about rendering tabular data.*](https://github.com/blog/1601-see-your-csvs)
+![Tableau](https://camo.githubusercontent.com/1b6dd0157ffb45d9939abf14233a0cb13b3b4dfe/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3238323735392f3937363436322f33323038336463652d303638642d313165332d393262322d3566323863313061353035392e706e67)
 
-###Revert a Pull Request
+[*Plus d'informations concernant le rendu de tableau.*](https://github.com/blog/1601-see-your-csvs)
+
+### Revert a Pull Request
 After a pull request is merged, you may find it does not help anything or it was a bad decision to merge the pull request.
 
 You can revert it by clicking the **Revert** button on the right side of a commit in the pull request page to create a pull request with reverted changes to this specific pull request.
