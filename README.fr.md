@@ -461,14 +461,14 @@ GitHub supporte le rendu de tableau dont les données suivent les formats `.csv`
 
 [*Plus d'informations concernant le rendu de tableau.*](https://github.com/blog/1601-see-your-csvs)
 
-### Revert a Pull Request
-After a pull request is merged, you may find it does not help anything or it was a bad decision to merge the pull request.
+### Retour après la fusion d'un Pull Request
+Après la fusion d'un pull request, vous pouvez réaliser que ce dernier n'aide en rien ou bien que cette fusion fut un mauvaise décision.
 
-You can revert it by clicking the **Revert** button on the right side of a commit in the pull request page to create a pull request with reverted changes to this specific pull request.
+Il est possible d'effectuer un retour en cliquant sur le bouton **Revert** à droite d'un commit donné, du pull request, afin de créer un pull request avec de changements spécifiques.
 
-![Revert button](https://camo.githubusercontent.com/0d3350caf2bb1cba53123ffeafc00ca702b1b164/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f68656c702f70756c6c5f72657175657374732f7265766572742d70756c6c2d726571756573742d6c696e6b2e706e67)
+![Bouton Revert](https://camo.githubusercontent.com/0d3350caf2bb1cba53123ffeafc00ca702b1b164/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f68656c702f70756c6c5f72657175657374732f7265766572742d70756c6c2d726571756573742d6c696e6b2e706e67)
 
-[*Read more about reverting pull requests*](https://github.com/blog/1857-introducing-the-revert-button)
+[*Plus d'informations sur le retour après la fusion d'un Pull Request*](https://github.com/blog/1857-introducing-the-revert-button)
 
 ### Diffs
 #### Rendered Prose Diffs
