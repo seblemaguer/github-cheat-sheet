@@ -38,8 +38,8 @@ Une collection d'astuces connues et moins connues pour Git et Github. Cette feui
   - [Rendu de données tabulaires](#rendering-tabular-data)
   - [Rétablir un pull request](#revert-a-pull-request)
   - [Diffs](#diffs)
-    - [Rendu des diffs verbeux](#rendered-prose-diffs)
-    - [Diffable Maps](#diffable-maps)
+    - [Rendu des diffs verbeux](#rendu-des-diffs-verbeux)
+    - [Rendu des diffs de cartes](#rendu-des-diffs-de-cartes)
     - [Expanding Context in Diffs](#expanding-context-in-diffs)
     - [Diff or Patch of Pull Request](#diff-or-patch-of-pull-request)
     - [Rendering and diffing images](#rendering-and-diffing-images)
@@ -471,26 +471,28 @@ Il est possible d'effectuer un retour en cliquant sur le bouton **Revert** à dr
 [*Plus d'informations sur le retour après la fusion d'un Pull Request*](https://github.com/blog/1857-introducing-the-revert-button)
 
 ### Diffs
-#### Rendered Prose Diffs
-Commits and pull requests, including rendered documents supported by GitHub (e.g. Markdown), feature *source* and *rendered* views.
+#### Rendu des Diffs verbeux
+Effectuer des commits et des pull requests, incluant le rendu de documents supportés par GitHub  (e.g. Markdown), intègre également la mise en place des vues *source* et *rendu*.
 
-![Source / Rendered view](https://github-images.s3.amazonaws.com/help/repository/rendered_prose_diff.png)
+![Vues Source / Rendu](https://github-images.s3.amazonaws.com/help/repository/rendered_prose_diff.png)
 
-Click the "rendered" button to see the changes as they'll appear in the rendered document. Rendered prose view is handy when you're adding, removing, and editing text:
+Cliquer sur le bouton **rendered** permet d'afficher les différences telles qu'elles vont apparaître dans le document transformés pour un rendu adapté. Le rendu verbeu est intéressant si vous ajouter, supprimer ou éditer du texte :
 
-![Rendered Prose Diffs](https://f.cloud.github.com/assets/17715/2003056/3997edb4-862b-11e3-90be-5e9586edecd7.png)
+![Rendu des diffs verbeux](https://f.cloud.github.com/assets/17715/2003056/3997edb4-862b-11e3-90be-5e9586edecd7.png)
 
-[*Read more about rendered prose diffs.*](https://github.com/blog/1784-rendered-prose-diffs)
+[*Plus d'informations à propos du rendu des diffs verbeux.*](https://github.com/blog/1784-rendered-prose-diffs)
 
-#### Diffable Maps
-Any time you view a commit or pull request on GitHub that includes geodata, GitHub will render a visual representation of what was changed.
+#### Rendu des diffs de cartes
+À chaque vois que vous visualisez un commit ou un pull request sur github qui inclut des données de
+géolocalisation, GitHub effectue un rendu permettant d'avoir une représentation visuelle de ce qui a changé.
 
-[![Diffable Maps](https://f.cloud.github.com/assets/282759/2090660/63f2e45a-8e97-11e3-9d8b-d4c8078b004e.gif)](https://github.com/benbalter/congressional-districts/commit/2233c76ca5bb059582d796f053775d8859198ec5)
+[![Rendu des diffs de cartes](https://f.cloud.github.com/assets/282759/2090660/63f2e45a-8e97-11e3-9d8b-d4c8078b004e.gif)](https://github.com/benbalter/congressional-districts/commit/2233c76ca5bb059582d796f053775d8859198ec5)
 
 [*Read more about diffable maps.*](https://github.com/blog/1772-diffable-more-customizable-maps)
 
 #### Expanding Context in Diffs
-Using the *unfold* button in the gutter of a diff, you can reveal additional lines of context with a click. You can keep clicking *unfold* until you've revealed the whole file, and the feature is available anywhere GitHub renders diffs.
+En utilisant le bouton **unfold** diposnible lors d'un diff, vous pouvez révéler des lignes
+additionnelles you can reveal additional lines of context with a click. You can keep clicking *unfold* until you've revealed the whole file, and the feature is available anywhere GitHub renders diffs.
 
 ![Expanding Context in Diffs](https://f.cloud.github.com/assets/22635/1610539/863c1f64-5584-11e3-82bf-151b406a272f.gif)
 
